@@ -23,7 +23,6 @@ add_alias "alias cls='clear'"
 
 
 
-
 # git alias
 add_alias "alias gitp='git pull'"
 add_alias "alias gitwho='git remote -v'"
@@ -37,3 +36,5 @@ add_alias "alias bash_reset='source /data/data/com.termux/files/usr/etc/bash.bas
 
 # for test
 add_alias "alias test='seq 1 10'"
+
+add_alias "alias bash_run='bash /data/data/com.termux/files/home/MY_GIT/first_run.sh'"
