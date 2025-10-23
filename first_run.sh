@@ -54,7 +54,7 @@ update_alias() {
     # 'reset' clears terminal display but does not reload bashrc
     # If you want to reload aliases, you might want:
     # source /data/data/com.termux/files/usr/etc/bash.bashrc
-    reset
+    # reset
 }
 
 # --------------------------------------------------------
