@@ -13,28 +13,31 @@ add_alias() {
   fi
 }
 
+
+add_alias "source /data/data/com.termux/files/home/MY_GIT/termux_basic/first_run.sh"
+
+
 # example alias basic
-add_alias "alias myedit='nano /data/data/com.termux/files/usr/etc/bash.bashrc'"
-add_alias "alias cls='clear'"
+alias myedit='nano /data/data/com.termux/files/usr/etc/bash.bashrc'
+alias cls='clear'
 
 # later you can just add more aliases like:
-# add_alias "alias ll='ls -la'"
-# add_alias "alias gs='git status'"
+# alias ll='ls -la'"
+# alias gs='git status'"
 
 
 
 # git alias
-add_alias "alias gitp='git pull'"
-add_alias "alias gitwho='git remote -v'"
+alias gitp='git pull'
+alias gitwho='git remote -v'
 
 
 #
-add_alias "alias bash_reset='source /data/data/com.termux/files/usr/etc/bash.bashrc'"
+alias bash_reset='source /data/data/com.termux/files/usr/etc/bash.bashrc'
 # 
 # auto reset not work
 # source /data/data/com.termux/files/usr/etc/bash.bashrc
-
 # for test
-add_alias "alias test1='seq 1 10'"
+alias test1='seq 1 10'
 
-add_alias "alias bash_run='bash /data/data/com.termux/files/home/MY_GIT/termux_basic/first_run.sh'"
+
