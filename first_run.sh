@@ -34,6 +34,29 @@ add_alias() {
 # --------------------------------------------------------
 add_alias "source /data/data/com.termux/files/home/MY_GIT/termux_basic/first_run.sh"
 
+
+# --------------------------------------------------------
+# Function: update_alias
+# Purpose : Update your local termux_basic repository from Git
+#           and reload aliases or environment
+# --------------------------------------------------------
+update_alias() {
+    # Move to the termux_basic repository directory
+    cd "$HOME/MY_GIT/termux_basic/" || {
+        echo "❌ Directory not found: $HOME/MY_GIT/termux_basic/"
+        return 1
+    }
+
+    # Pull the latest changes from the remote Git repository
+    git pull
+
+    # Reload aliases or environment after update
+    # 'reset' clears terminal display but does not reload bashrc
+    # If you want to reload aliases, you might want:
+    # source /data/data/com.termux/files/usr/etc/bash.bashrc
+    reset
+}
+
 # --------------------------------------------------------
 # Basic aliases
 # --------------------------------------------------------
