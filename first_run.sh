@@ -14,7 +14,7 @@ add_alias() {
 }
 
 # example alias
-add_alias "alias edit='nano /data/data/com.termux/files/usr/etc/bash.bashrc'"
+add_alias "alias myedit='nano /data/data/com.termux/files/usr/etc/bash.bashrc'"
 
 # later you can just add more aliases like:
 # add_alias "alias ll='ls -la'"
