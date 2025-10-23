@@ -26,7 +26,8 @@ add_alias "alias myedit='nano /data/data/com.termux/files/usr/etc/bash.bashrc'"
 # git alias
 add_alias "alias gitp='git pull'"
 add_alias "alias gitwho='git remote -v'"
-
+add_alias "alias bash_reset='source /data/data/com.termux/files/usr/etc/bash.bashrc'"
+ 
 
 
 
