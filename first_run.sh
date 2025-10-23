@@ -37,4 +37,4 @@ add_alias "alias bash_reset='source /data/data/com.termux/files/usr/etc/bash.bas
 # for test
 add_alias "alias test1='seq 1 10'"
 
-add_alias "alias bash_run='bash /data/data/com.termux/files/home/MY_GIT/first_run.sh'"
+add_alias "alias bash_run='bash /data/data/com.termux/files/home/MY_GIT/termux_basic/first_run.sh'"
