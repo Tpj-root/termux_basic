@@ -55,6 +55,7 @@ update_alias() {
     # If you want to reload aliases, you might want:
     # source /data/data/com.termux/files/usr/etc/bash.bashrc
     # reset
+    cd $HOME
 }
 
 # --------------------------------------------------------
