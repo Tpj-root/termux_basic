@@ -127,6 +127,19 @@ print_face() {
     echo -e "\e[33mAnd Here We Go\e[0m" # Yellow text for the phrase
 }
 
+print_info() {
+
+    # -------- Info Section --------
+    echo -e "\e[36m==============================================\e[0m" # cyan line
+    echo -e "\e[32mPublic Research Association of Social Hacktivity\e[0m" # green
+    echo -e "\e[33mLocation: Trichy\e[0m" # yellow
+    echo -e "\e[35mAdmin: https://github.com/Tpj-root\e[0m" # magenta
+    echo -e "\e[36mVersion: 1.0\e[0m" # cyan
+    echo -e "\e[36m==============================================\e[0m" # cyan line
+
+}
+
 clear
 
 print_face
+print_info
