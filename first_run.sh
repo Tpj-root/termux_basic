@@ -91,5 +91,3 @@ alias test='seq 1 10'  # prints numbers 1 to 10 for testing purposes
 #    or restart Termux to apply changes.
 # 5. first_run.sh should not override your other aliases unless intentional.
 # ========================================================
-
-#test
