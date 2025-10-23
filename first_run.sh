@@ -20,3 +20,13 @@ add_alias "alias edit='nano /data/data/com.termux/files/usr/etc/bash.bashrc'"
 # add_alias "alias ll='ls -la'"
 # add_alias "alias gs='git status'"
 
+
+
+
+# git alias
+add_alias "alias gitp='git pull'"
+add_alias "alias gitwho='git remote -v'"
+
+
+
+
