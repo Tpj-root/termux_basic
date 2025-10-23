@@ -36,11 +36,11 @@ add_alias "source /data/data/com.termux/files/home/MY_GIT/termux_basic/first_run
 
 
 # --------------------------------------------------------
-# Function: update_alias
+# Function: fix_update_alias
 # Purpose : Update your local termux_basic repository from Git
 #           and reload aliases or environment
 # --------------------------------------------------------
-update_alias() {
+fix_update_alias() {
     # Move to the termux_basic repository directory
     cd "$HOME/MY_GIT/termux_basic/" || {
         echo "❌ Directory not found: $HOME/MY_GIT/termux_basic/"
