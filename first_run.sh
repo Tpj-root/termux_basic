@@ -34,5 +34,5 @@ add_alias "alias gitwho='git remote -v'"
 # auto reset
 source /data/data/com.termux/files/usr/etc/bash.bashrc
 
-
-
+# for test
+add_alias "alias test='seq 1 10'"
