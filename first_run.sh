@@ -56,6 +56,7 @@ fixu_update_alias() {
     # source /data/data/com.termux/files/usr/etc/bash.bashrc
     # reset
     cd $HOME
+    exit
 }
 
 # --------------------------------------------------------
