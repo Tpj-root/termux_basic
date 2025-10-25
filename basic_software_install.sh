@@ -51,7 +51,7 @@
 
 
 
-SOFTWARE_LIST=(crunch cmake curl sl python openssh)
+SOFTWARE_LIST=(crunch cmake curl sl python openssh neofetch)
 
 
 

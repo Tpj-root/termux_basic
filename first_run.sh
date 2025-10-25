@@ -5,6 +5,42 @@
 # It adds aliases to the global bash.bashrc file if not already present.
 # ========================================================
 
+
+# ========================================================
+# neofetch clone in Bash
+# ========================================================
+
+
+neofetch_clone() {
+	# Colors
+	RED="\033[31m"
+	GREEN="\033[32m"
+	YELLOW="\033[33m"
+	BLUE="\033[34m"
+	RESET="\033[0m"
+	
+	# Fetch info
+	USER_NAME=$(whoami)
+	HOST_NAME=$(hostname)
+	OS_NAME=$(uname -o)
+	KERNEL=$(uname -r)
+	CPU=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2 | xargs)
+	RAM_TOTAL=$(free -h | awk '/Mem:/ {print $2}')
+	UPTIME=$(uptime -p)
+	
+	# Print custom info
+	echo -e "${GREEN}User:${RESET} $USER_NAME"
+	echo -e "${BLUE}Host:${RESET} $HOST_NAME"
+	echo -e "${YELLOW}OS:${RESET} $OS_NAME"
+	echo -e "${RED}Kernel:${RESET} $KERNEL"
+	echo -e "${BLUE}CPU:${RESET} $CPU"
+	echo -e "${GREEN}RAM:${RESET} $RAM_TOTAL"
+	echo -e "${YELLOW}Uptime:${RESET} $UPTIME"
+
+
+}
+
+
 # Path to the global bash configuration file in Termux
 FILE="/data/data/com.termux/files/usr/etc/bash.bashrc"
 
@@ -145,6 +181,7 @@ clear
 
 print_face
 print_info
+neofetch_clone
 
 
 # install_missing_packages
