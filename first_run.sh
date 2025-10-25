@@ -40,7 +40,7 @@ add_alias "source /data/data/com.termux/files/home/MY_GIT/termux_basic/first_run
 # Purpose : Update your local termux_basic repository from Git
 #           and reload aliases or environment
 # --------------------------------------------------------
-fix_update_alias() {
+fixu_update_alias() {
     # Move to the termux_basic repository directory
     cd "$HOME/MY_GIT/termux_basic/" || {
         echo "❌ Directory not found: $HOME/MY_GIT/termux_basic/"
@@ -147,4 +147,4 @@ print_info
 
 # install_missing_packages
 # --------------------------------------------------------
-alias missing_packages='bash /data/data/com.termux/files/home/MY_GIT/termux_basic/basic_software_install.sh' #
+alias fixp_missing_packages='bash /data/data/com.termux/files/home/MY_GIT/termux_basic/basic_software_install.sh' #
