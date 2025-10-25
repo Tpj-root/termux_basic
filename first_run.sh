@@ -178,10 +178,9 @@ print_info() {
 }
 
 clear
-
+neofetch
 print_face
 print_info
-neofetch_clone
 
 
 # install_missing_packages
