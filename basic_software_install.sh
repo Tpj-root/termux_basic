@@ -18,7 +18,7 @@
 # --------------------------------------------------------
 
 # put this in your ~/.bashrc or functions.sh and source it
-SOFTWARE_LIST=(crunch cmake curl)
+SOFTWARE_LIST=(crunch cmake curl sl)
 
 install_missing_packages() {
   local run_in_tmux=${RUN_IN_TMUX:-0}
