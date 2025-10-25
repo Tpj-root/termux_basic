@@ -56,6 +56,7 @@ fixu_update_alias() {
     # source /data/data/com.termux/files/usr/etc/bash.bashrc
     # reset
     cd $HOME
+    # kill termux 
     exit
 }
 
@@ -149,3 +150,9 @@ print_info
 # install_missing_packages
 # --------------------------------------------------------
 alias fixp_missing_packages='bash /data/data/com.termux/files/home/MY_GIT/termux_basic/basic_software_install.sh' #
+
+
+
+# python ✅ Serves current directory
+alias fixs_python_server='python3 -m http.server 8080'
+

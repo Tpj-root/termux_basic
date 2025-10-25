@@ -18,7 +18,63 @@
 # --------------------------------------------------------
 
 # put this in your ~/.bashrc or functions.sh and source it
+
+
+
+# Basic essentials
+pkg install git curl wget nano vim python clang make
+
+# Network & web tools
+pkg install nmap net-tools openssh socat iproute2
+
+# Compression & file tools
+pkg install zip unzip tar p7zip
+
+# Development & build tools
+pkg install cmake nodejs golang rust
+
+# Text & JSON tools
+pkg install jq grep sed awk coreutils
+
+# Security / pentesting tools
+pkg install hydra hashcat sqlmap metasploit
+
+# Terminal utilities
+pkg install tmux htop neofetch termux-api
+
+# Wordlist / brute-force tools
+pkg install crunch
+
+# Extra utilities
+pkg install ffmpeg imagemagick proot fish zsh
+
+
+
+
+
+
+
+
+
+
+
+
 SOFTWARE_LIST=(crunch cmake curl sl)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 install_missing_packages() {
   local run_in_tmux=${RUN_IN_TMUX:-0}
@@ -74,3 +130,10 @@ install_missing_packages() {
 
 
 install_missing_packages
+
+
+
+
+
+
+
