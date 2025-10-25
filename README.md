@@ -94,4 +94,44 @@ alias edit='nano /data/data/com.termux/files/usr/etc/bash.bashrc'
 
 
 
+Use these short commands in Termux to see installed packages.
+
+Show packages (Termux `pkg`):
+
+```bash
+pkg list-installed
+```
+
+Show Debian-style list (more detailed):
+
+```bash
+dpkg -l
+```
+
+Show apt-style (names + versions):
+
+```bash
+apt list --installed
+```
+
+Show only package names (one-liner):
+
+```bash
+dpkg -l | awk '/^ii/ {print $2}'
+```
+
+Search within installed list (example: cmake):
+
+```bash
+pkg list-installed | grep -i cmake
+# or
+dpkg -l | grep -i cmake
+```
+
+Save list to a file:
+
+```bash
+pkg list-installed > ~/termux_installed.txt
+```
+
 
