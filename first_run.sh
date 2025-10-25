@@ -143,3 +143,8 @@ clear
 
 print_face
 print_info
+
+
+# install_missing_packages
+# --------------------------------------------------------
+alias missing_packages='bash /data/data/com.termux/files/home/MY_GIT/termux_basic/basic_software_install.sh' #
