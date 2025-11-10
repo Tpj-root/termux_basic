@@ -192,3 +192,4 @@ alias fixp_missing_packages='bash /data/data/com.termux/files/home/MY_GIT/termux
 # python ✅ Serves current directory
 alias fixs_python_server='python3 -m http.server 8080'
 alias fixe_exit='exit'
+alias pyhttp='python -m http.server 8000'
