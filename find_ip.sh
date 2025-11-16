@@ -17,6 +17,7 @@ scan_all_ip() {
             echo "[ACTIVE] $ip"
         fi
     done
+    echo "Scan completed."
 }
 
 scan_all_ip "$1"
