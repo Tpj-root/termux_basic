@@ -193,3 +193,17 @@ alias fixp_missing_packages='bash /data/data/com.termux/files/home/MY_GIT/termux
 alias fixs_python_server='python3 -m http.server 8080'
 alias fixe_exit='exit'
 alias pyhttp='python -m http.server 8000'
+
+
+# 
+# Fix runtime errors
+# 
+killhttp() {
+    pid=$(ps aux | grep "http.server" | grep -v grep | awk '{print $2}')
+    if [ -z "$pid" ]; then
+        echo "No http.server running"
+    else
+        echo "Killing PID: $pid"
+        kill -9 $pid
+    fi
+}
