@@ -207,3 +207,24 @@ killhttp() {
         kill -9 $pid
     fi
 }
+
+alias fixkill_pyhttp='killhttp'
+
+
+film_server() {
+    PORT=8000
+    DIR="$HOME/storage/downloads/film"
+
+    # Check if server already running on port
+    PID=$(lsof -ti :$PORT)
+
+    if [ -n "$PID" ]; then
+        echo "Killing old server (PID: $PID)"
+        kill -9 $PID
+    fi
+
+    cd "$DIR" || { echo "Folder not found"; return 1; }
+
+    echo "Starting server on port $PORT..."
+    python3 -m http.server $PORT
+}
