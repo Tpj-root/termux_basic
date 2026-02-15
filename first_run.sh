@@ -211,7 +211,7 @@ killhttp() {
 alias fixkill_pyhttp='killhttp'
 
 
-film_server() {
+fixfilm_server() {
     PORT=8000
     DIR="$HOME/storage/downloads/film"
 
