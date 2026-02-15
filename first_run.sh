@@ -195,36 +195,81 @@ alias fixe_exit='exit'
 alias pyhttp='python -m http.server 8000'
 
 
-# 
+#
 # Fix runtime errors
-# 
+#
+
 killhttp() {
+
+    # ps aux
+    # ps  = show running processes
+    # a   = show processes of all users
+    # u   = show detailed info (user, PID, CPU, etc.)
+    # x   = include processes not attached to terminal
+    #
+    # grep "http.server"
+    # Filters only lines containing http.server
+    #
+    # grep -v grep
+    # Removes the grep command itself from results
+    #
+    # awk '{print $2}'
+    # awk extracts the 2nd column → PID (Process ID)
+
     pid=$(ps aux | grep "http.server" | grep -v grep | awk '{print $2}')
+
+    # -z "$pid"
+    # Checks if variable is empty
+    # If empty → no server running
+
     if [ -z "$pid" ]; then
         echo "No http.server running"
     else
         echo "Killing PID: $pid"
+
+        # kill -9
+        # -9 = force kill (SIGKILL)
+        # Immediately stops the process
+
         kill -9 $pid
     fi
 }
 
+
 alias fixkill_pyhttp='killhttp'
 
-
 fixfilm_server() {
+
+    # Port number where the HTTP server will run
     PORT=8000
+
+    # Directory path where your film files are stored
+    # $HOME = your home directory
     DIR="$HOME/storage/downloads/film"
 
-    # Check if server already running on port
+    # Find if any process is already using this PORT
+    # lsof -ti :$PORT
+    # -lsof = list open files (network ports are files)
+    # -t = show only PID
+    # -i :$PORT = filter by this port number
     PID=$(lsof -ti :$PORT)
 
+    # If PID is not empty, that means server already running
     if [ -n "$PID" ]; then
         echo "Killing old server (PID: $PID)"
+
+        # kill -9 force stops the process immediately
         kill -9 $PID
     fi
 
+    # Change directory to your film folder
+    # If folder not found, show message and stop function
     cd "$DIR" || { echo "Folder not found"; return 1; }
 
+    # Start Python HTTP server on selected PORT
     echo "Starting server on port $PORT..."
+
+    # python3 -m http.server runs built-in simple web server
     python3 -m http.server $PORT
 }
+
