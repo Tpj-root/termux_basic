@@ -273,3 +273,10 @@ fixfilm_server() {
     python3 -m http.server $PORT
 }
 
+
+
+
+
+
+# pc 2 termux chat
+alias fixpc2termux_chat='cd /data/data/com.termux/files/home/MY_GIT/termux_basic/pc_2_termux_v1/ && python main.py' #
