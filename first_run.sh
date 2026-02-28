@@ -280,3 +280,34 @@ fixfilm_server() {
 
 # pc 2 termux chat
 alias fixpc2termux_chat='cd /data/data/com.termux/files/home/MY_GIT/termux_basic/pc_2_termux_v1/ && python main.py' #
+alias showportlis='ufw status'
+
+## FIX PORT
+
+# where@slave:~/Downloads/NAT/P1/pro$ sudo ufw status 
+# [sudo] password for where: 
+# Status: active
+
+# To                         Action      From
+# --                         ------      ----
+# 22/tcp                     ALLOW       Anywhere                  
+# 1714:1764/tcp              ALLOW       Anywhere                  
+# 1714:1764/udp              ALLOW       Anywhere                  
+# 8000/tcp                   ALLOW       Anywhere                  
+# Samba                      ALLOW       Anywhere                  
+# 22/tcp (v6)                ALLOW       Anywhere (v6)             
+# 1714:1764/tcp (v6)         ALLOW       Anywhere (v6)             
+# 1714:1764/udp (v6)         ALLOW       Anywhere (v6)             
+# 8000/tcp (v6)              ALLOW       Anywhere (v6)             
+# Samba (v6)                 ALLOW       Anywhere (v6)             
+
+
+# ✅ Fix Allow 5555:
+# sudo ufw allow 5555/tcp
+# Then check:
+# sudo ufw status
+
+# You should see:
+# 5555/tcp  ALLOW  Anywhere
+
+
