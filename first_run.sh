@@ -280,7 +280,10 @@ fixfilm_server() {
 
 # pc 2 termux chat
 alias fixpc2termux_chat='cd /data/data/com.termux/files/home/MY_GIT/termux_basic/pc_2_termux_v1/ && python main.py' #
-alias showportlis='ufw status'
+
+# FIXME not work
+# alias showportlis='ufw status'
+
 
 ## FIX PORT
 

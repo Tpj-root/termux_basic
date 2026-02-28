@@ -50,8 +50,24 @@
 
 
 
+# pkg update
+# pkg upgrade
+# pkg install netcat-openbsd
+# When you run:
+# nc -vz 192.168.1.6 5555
+# It tries to connect to:
+# PC IP → 192.168.1.6
+# Port → 5555
+# Result meaning:
 
-SOFTWARE_LIST=(crunch cmake curl sl python openssh neofetch)
+# ✅ succeeded → Port open + server running
+# ❌ connection refused → Server not running
+# ❌ timed out → Firewall blocking
+# So we use it to debug connection problem.
+
+
+SOFTWARE_LIST=(crunch cmake curl sl python openssh neofetch netcat)
+
 
 
 
